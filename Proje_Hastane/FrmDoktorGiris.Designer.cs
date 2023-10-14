@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorGiris));
             this.btnGiris = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
@@ -44,6 +45,7 @@
             this.btnGiris.TabIndex = 12;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtSifre
             // 
@@ -51,6 +53,7 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(91, 20);
             this.txtSifre.TabIndex = 11;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // mskTc
             // 
@@ -91,8 +94,10 @@
             // 
             // FrmDoktorGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(390, 217);
             this.Controls.Add(this.btnGiris);
@@ -101,8 +106,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
-            this.Text = "FrmDoktorGiris";
+            this.Text = "Doktor Giris";
             this.ResumeLayout(false);
             this.PerformLayout();
 

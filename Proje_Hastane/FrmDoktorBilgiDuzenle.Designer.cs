@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDuzenle));
             this.btnBilgiGuncelle = new System.Windows.Forms.Button();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@
             this.btnBilgiGuncelle.TabIndex = 40;
             this.btnBilgiGuncelle.Text = "Güncelle";
             this.btnBilgiGuncelle.UseVisualStyleBackColor = false;
+            this.btnBilgiGuncelle.Click += new System.EventHandler(this.btnBilgiGuncelle_Click);
             // 
             // txtSoyad
             // 
@@ -138,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(306, 311);
             this.Controls.Add(this.label5);
@@ -151,8 +154,11 @@
             this.Controls.Add(this.mskTc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorBilgiDuzenle";
-            this.Text = "FrmDoktorBilgiDuzenle";
+            this.Text = "Doktor Bilgi Güncelle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

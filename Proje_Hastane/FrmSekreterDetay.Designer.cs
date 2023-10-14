@@ -57,10 +57,11 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnListe = new System.Windows.Forms.Button();
             this.btnBransPanel = new System.Windows.Forms.Button();
             this.btnDoktorPanel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -151,6 +152,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnTemizle);
             this.groupBox3.Controls.Add(this.btnKaydet);
             this.groupBox3.Controls.Add(this.chkDurum);
             this.groupBox3.Controls.Add(this.mskTC);
@@ -176,7 +178,7 @@
             // 
             this.btnKaydet.Location = new System.Drawing.Point(50, 199);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(97, 39);
+            this.btnKaydet.Size = new System.Drawing.Size(97, 29);
             this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
@@ -208,6 +210,7 @@
             this.cmbDoktor.Name = "cmbDoktor";
             this.cmbDoktor.Size = new System.Drawing.Size(121, 21);
             this.cmbDoktor.TabIndex = 11;
+            this.cmbDoktor.Text = "Doktor Seçiniz";
             // 
             // cmbBrans
             // 
@@ -216,6 +219,7 @@
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(121, 21);
             this.cmbBrans.TabIndex = 10;
+            this.cmbBrans.Text = "Branş Seçiniz";
             this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             // 
             // mskSaat
@@ -350,6 +354,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(294, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 29);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Duyurular";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnListe
             // 
             this.btnListe.Location = new System.Drawing.Point(198, 46);
@@ -380,15 +394,15 @@
             this.btnDoktorPanel.UseVisualStyleBackColor = true;
             this.btnDoktorPanel.Click += new System.EventHandler(this.btnDoktorPanel_Click);
             // 
-            // button1
+            // btnTemizle
             // 
-            this.button1.Location = new System.Drawing.Point(294, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 29);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Duyurular";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTemizle.Location = new System.Drawing.Point(50, 234);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(97, 29);
+            this.btnTemizle.TabIndex = 14;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // FrmSekreterDetay
             // 
@@ -456,5 +470,6 @@
         private System.Windows.Forms.Button btnBransPanel;
         private System.Windows.Forms.Button btnDoktorPanel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTemizle;
     }
 }

@@ -67,8 +67,19 @@ namespace Proje_Hastane
             cmd.ExecuteNonQuery();
             bgl.Baglanti().Close();
             MessageBox.Show($" {mskTarih.Text} Tarihli, Saat: {mskSaat.Text}'de {cmbBrans.Text} bölümü Doktoru {cmbDoktor.Text} için Randevu Olusturulmuştur");
-        }
+            Temizle();
 
+        }
+        void Temizle()
+        {
+            txtID.Text = "";
+            mskSaat.Text = "";
+            mskTarih.Text = "";
+            mskTC.Text = "";
+            cmbBrans.Text = "Branş Seçiniz";
+            cmbDoktor.Text = "Doktor Seçiniz";
+            
+        }
         private void cmbBrans_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Doktorları Getirme (randevu paneli)
@@ -114,6 +125,11 @@ namespace Proje_Hastane
         {
             FrmDuyurular frmDuyurular = new FrmDuyurular();
             frmDuyurular.Show();
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
         }
     }
 }
