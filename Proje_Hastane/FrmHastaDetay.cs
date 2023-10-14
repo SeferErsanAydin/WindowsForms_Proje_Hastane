@@ -79,5 +79,10 @@ namespace Proje_Hastane
             fr.hastaTC = lblTc.Text;
             fr.Show();
         }
+
+        private void btnRandevuAl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
